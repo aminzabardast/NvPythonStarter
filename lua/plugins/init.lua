@@ -46,4 +46,21 @@ return {
   -- 		},
   -- 	},
   -- },
+  -- enable copilot
+  {
+    "github/copilot.vim",
+    lazy = false,
+    init = function()
+      -- Disable the default <Tab> mapping
+      vim.g.copilot_no_tab_map = true
+    end,
+    config = function()
+      -- Accept All: <C-y>
+      -- We use a Vim expression to call the plugin's internal accept function
+      vim.keymap.set('i', '<C-y>', 'copilot#Accept("\\<CR>")', {
+        expr = true,
+        replace_keycodes = false,
+      })
+    end,
+  },
 }
