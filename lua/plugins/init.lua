@@ -53,6 +53,8 @@ return {
     init = function()
       -- Disable the default <Tab> mapping
       vim.g.copilot_no_tab_map = true
+      -- Start disabled by default
+      vim.g.copilot_enabled = false
     end,
     config = function()
       -- Accept All: <C-y>
