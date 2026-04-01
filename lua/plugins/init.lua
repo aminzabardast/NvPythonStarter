@@ -61,6 +61,11 @@ return {
         expr = true,
         replace_keycodes = false,
       })
+      -- Accept next word: <M-j> (Option+j)
+      vim.keymap.set('i', '<M-j>', 'copilot#AcceptWord()', {
+        expr = true,
+        replace_keycodes = false,
+      })
     end,
   },
 }
